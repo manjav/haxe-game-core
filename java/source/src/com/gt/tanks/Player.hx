@@ -11,7 +11,6 @@ class Player implements IPlayer
 {
 	private var armors(get, null):Map<ArmorType, Armor>;
 	
-
 	public function new() 
 	{
 		_armors = [
@@ -24,7 +23,4 @@ class Player implements IPlayer
 	{
 		return armors;
 	}
-	
-
-	
 }
