@@ -1,6 +1,9 @@
 package com.gt.tanks;
+
 import com.gt.tanks.armors.Armor;
 import com.gt.tanks.armors.ArmorType;
+import com.gt.tanks.armors.HeavyArmor;
+import com.gt.tanks.armors.SimpleArmor;
 
 /**
  * ...
@@ -10,10 +13,11 @@ import com.gt.tanks.armors.ArmorType;
 class Player implements IPlayer
 {
 	private var armors(get, null):Map<ArmorType, Armor>;
+	private var money(get, null):UInt;
 	
 	public function new() 
 	{
-		_armors = [
+		armors = [
 		ArmorType.simple => new SimpleArmor(),
 		ArmorType.heavy => new HeavyArmor()
 		];
@@ -22,5 +26,10 @@ class Player implements IPlayer
 	public function get_armors():Map<ArmorType, Armor> 
 	{
 		return armors;
+	}
+	
+	public function get_money():UInt 
+	{
+		return money;
 	}
 }
