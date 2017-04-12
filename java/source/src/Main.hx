@@ -1,8 +1,6 @@
 package;
 
-import com.gt.armors.ArmorType;
-import com.gt.armors.Player;
-import com.gt.armors.SimpleArmor;
+import com.gt.tanks.Player;
 import java.Lib;
 
 /**

@@ -1,4 +1,4 @@
-package com.gt.armors;
+package com.gt.tanks.armors;
 
 /**
  * @author Mansour Djawadi
