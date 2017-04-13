@@ -4,14 +4,14 @@ package com.gt.tanks.armors;
  * ...
  * @author Mansour Djawadi
  */
-class HeavyArmor extends Armor
+class SimpleArmor extends Armor
 {
-
+	
 	public function new()
 	{
 		super();
-		type = ArmorType.simple;
-		_destrsuction = 2.5;
+		type = ArmorType.SIMPLE;
+		destrsuction = 1.5;
 	}
-
+	
 }

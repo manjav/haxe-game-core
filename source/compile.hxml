@@ -1,0 +1,12 @@
+#				_-_-_-_-_-_-	JAVA COMPILE	-_-_-_-_-_
+
+-cp src
+-main Main
+-java bin\java
+
+
+#				_-_-_-_-_-_-	SWF COMPILE	-_-_-_-_-_
+--next
+-cp src
+-main Main
+-swf bin\flash\core.swf

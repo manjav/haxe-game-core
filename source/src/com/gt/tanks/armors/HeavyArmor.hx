@@ -10,8 +10,8 @@ class HeavyArmor extends Armor
 	public function new()
 	{
 		super();
-		type = ArmorType.simple;
-		_destrsuction = 2.5;
+		type = ArmorType.HEAVY;
+		destrsuction = 2.5;
 	}
 
 }

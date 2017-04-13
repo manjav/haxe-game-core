@@ -3,9 +3,6 @@ package;
 import com.gt.tanks.IPlayer;
 import com.gt.tanks.Player;
 import com.gt.tanks.armors.ArmorType;
-import flash.display.StageAlign;
-import flash.display.StageScaleMode;
-import flash.Lib;
 
 /**
  * ...
@@ -13,12 +10,12 @@ import flash.Lib;
  */
 class Main 
 {
-	static public var player:IPlayer;
+	static private var player:Player;
 	
 	static function main() 
 	{
 		player = new Player();
-		trace(player.get_armors().get(ArmorType.heavy).unlockLevel);
+		//trace(player.get_armor(ArmorType.HEAVY).unlockLevel);
 	}
 	
 }

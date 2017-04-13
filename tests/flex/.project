@@ -22,4 +22,11 @@
 		<nature>com.adobe.flexbuilder.project.apollonature</nature>
 		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] Action</name>
+			<type>2</type>
+			<location>C:/Users/Mansour/Desktop/tanks-core/Action</location>
+		</link>
+	</linkedResources>
 </projectDescription>

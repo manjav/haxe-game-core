@@ -4,13 +4,13 @@
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="bin\FlashTest.swf" />
+    <movie path="bin\" />
     <movie fps="30" />
     <movie width="800" />
     <movie height="600" />
     <movie version="12" />
     <movie minorVersion="0" />
-    <movie platform="Flash Player" />
+    <movie platform="Java" />
     <movie background="#FFFFFF" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
@@ -23,7 +23,7 @@
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="Main" />
-    <option enabledebug="True" />
+    <option enabledebug="False" />
     <option additional="" />
   </build>
   <!-- haxelib libraries -->
@@ -34,10 +34,6 @@
   <compileTargets>
     <compile path="src\Main.hx" />
   </compileTargets>
-  <!-- Assets to embed into the output SWF -->
-  <library>
-    <!-- example: <asset path="..." id="..." update="..." glyphs="..." mode="..." place="..." sharepoint="..." /> -->
-  </library>
   <!-- Paths to exclude from the Project Explorer tree -->
   <hiddenPaths>
     <hidden path="obj" />
