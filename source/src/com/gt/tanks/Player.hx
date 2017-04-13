@@ -53,7 +53,7 @@ class Player
 	public function new()
 	{
 		armors = new  Armors();
-		//armors.
+		armors.push(new SimpleArmor());
 	}
 /*
 		#if java
@@ -85,7 +85,7 @@ class Player
 	private var armors:Armors;
 	public function get_armors():Armors
 	{
-		return null;
+		return armors;
 	}
 	
 }

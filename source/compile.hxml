@@ -14,7 +14,11 @@
 -cp src
 -main Main
 -swf bin\flash\core.swf
-#-as3 bin\flash\src\
+
+--next
+-cp src
+-main Main
+-as3 bin\flash\src\
 
 
 #-swf <file> : compile code to Flash SWF file

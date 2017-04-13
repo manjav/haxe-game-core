@@ -1,6 +1,7 @@
 package
 {
 	import com.gt.tanks.IPlayer;
+	import com.gt.tanks.Player;
 	
 	import flash.display.Loader;
 	import flash.display.Sprite;
@@ -24,7 +25,7 @@ package
 			var loader:Loader = new Loader();
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, loaderInfo_completeHandler);
 			loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, loaderInfo_completeHandler);
-			loader.load(new URLRequest(File.desktopDirectory.resolvePath( "core.swf").url));
+			loader.load(new URLRequest(File.documentsDirectory.resolvePath( "haxe-tanks-core\\source\\bin\\flash\\core.swf").url));
 		}
 		
 		private function loaderInfo_completeHandler(e:Event):void 
@@ -32,10 +33,16 @@ package
 			//var loader:Loader = e.currentTarget.loader;
 			var dash:Class = e.currentTarget.applicationDomain.getDefinition("com.gt.tanks.Player")  as  Class;
 			
-			var p:IPlayer = new dash();
+			var p:Object = new dash();
 			//trace(p.get_armors().get(ArmorType.heavy).unlockLevel);
-			trace(p.get_armor(1).destrsuction);
+			trace(p.get_armors().length());
 		}
+		/*-define=CONFIG::debugging,true
+		In ActionScript, you can use this value to conditionalize statements; for example:
 		
+		CONFIG::debugging
+		{
+			// Execute debugging code here.
+		}*/
 	}
 }

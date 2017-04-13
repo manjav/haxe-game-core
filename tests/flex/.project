@@ -24,9 +24,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>[source path] Action</name>
+			<name>[source path] src</name>
 			<type>2</type>
-			<location>C:/Users/Mansour/Desktop/tanks-core/Action</location>
+			<location>C:/Users/Mansour/Documents/haxe-tanks-core/source/bin/flash/src</location>
 		</link>
 	</linkedResources>
 </projectDescription>
