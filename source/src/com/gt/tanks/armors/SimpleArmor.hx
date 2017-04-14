@@ -9,8 +9,7 @@ class SimpleArmor extends Armor
 	
 	public function new()
 	{
-		super();
-		type = ArmorType.SIMPLE;
+		super(ArmorType.SIMPLE);
 		destrsuction = 1.5;
 	}
 	

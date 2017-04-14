@@ -6,10 +6,11 @@ package com.gt.tanks.armors;
  */
 class ArmorType
 {
+	public static var NONE:Int = -1;
 
-	public static var SIMPLE:Int = 1;
-	public static var HEAVY:Int = 2;
-	public static var FIRE:Int = 3;
+	public static var SIMPLE:Int = 0;
+	public static var HEAVY:Int = 1;
+	public static var FIRE:Int = 2;
 
 	public function new()
 	{
