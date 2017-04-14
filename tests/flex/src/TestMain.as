@@ -1,7 +1,7 @@
 package
 {
-	import com.gt.tanks.IPlayer;
 	import com.gt.tanks.Player;
+	import com.gt.tanks.armors.ArmorType;
 	
 	import flash.display.Loader;
 	import flash.display.Sprite;
@@ -17,7 +17,7 @@ package
 		public function TestMain()
 		{
 			super();
-			
+						
 			// support autoOrients
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
@@ -35,8 +35,9 @@ package
 			
 			var p:Object = new dash();
 			//trace(p.get_armors().get(ArmorType.heavy).unlockLevel);
-			trace(p.get_armors().length());
+			trace(p.get_armors().get(ArmorType.SIMPLE).get_destrsuction());
 		}
+		
 		/*-define=CONFIG::debugging,true
 		In ActionScript, you can use this value to conditionalize statements; for example:
 		
