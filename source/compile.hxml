@@ -9,7 +9,7 @@
 
 
 
-#				_-_-_-_-_-_-      SWF COMPILE      -_-_-_-_-_
+#				_-_-_-_-_-_-      SWF,SWC COMPILE      -_-_-_-_-_
 --next
 -cp src
 -main Main
@@ -18,7 +18,7 @@
 --next
 -cp src
 -main Main
--as3 bin\flash\src\
+-swf bin\flash\core.swc
 
 
 #-swf <file> : compile code to Flash SWF file
