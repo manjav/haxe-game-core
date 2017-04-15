@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>tanks-core-flash-test</name>
+	<name>game-core-flash-test</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -22,11 +22,4 @@
 		<nature>com.adobe.flexbuilder.project.apollonature</nature>
 		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>[source path] src</name>
-			<type>2</type>
-			<location>C:/Users/Mansour/Documents/haxe-tanks-core/source/bin/flash/src</location>
-		</link>
-	</linkedResources>
 </projectDescription>
