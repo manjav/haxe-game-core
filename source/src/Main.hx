@@ -1,8 +1,6 @@
 package;
-
-import com.gt.tanks.IPlayer;
 import com.gt.tanks.Player;
-import com.gt.tanks.armors.ArmorType;
+
 
 /**
  * ...
@@ -14,8 +12,5 @@ class Main
 	
 	static function main() 
 	{
-		player = new Player();
-		//trace(player.get_armor(ArmorType.HEAVY).unlockLevel);
 	}
-	
 }
