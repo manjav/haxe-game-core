@@ -5,35 +5,50 @@ package
 	
 	import flash.display.Loader;
 	import flash.display.Sprite;
-	import flash.display.StageAlign;
-	import flash.display.StageScaleMode;
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;
 	import flash.filesystem.File;
-	import flash.net.URLRequest;
+	import flash.filesystem.FileStream;
+	import flash.system.ApplicationDomain;
+	import flash.system.LoaderContext;
+	import flash.utils.ByteArray;
 	
 	public class TestMain extends Sprite
 	{
 		public function TestMain()
 		{
-			super();
-						
-			// support autoOrients
-			stage.align = StageAlign.TOP_LEFT;
-			stage.scaleMode = StageScaleMode.NO_SCALE;
+			var file:File = File.desktopDirectory.resolvePath("haxe-tanks-core\\source\\bin\\flash\\core.swf");
+			
+			var fileStream:FileStream = new FileStream();
+			fileStream.addEventListener(Event.COMPLETE, fileStream_completeHandler);
+			fileStream.addEventListener(IOErrorEvent.IO_ERROR, fileStream_ioReadErrorHandler);
+			//fileStream.addEventListener(ProgressEvent.PROGRESS, progressHandler);
+			fileStream.openAsync(file, "read");
+		}
+		private function fileStream_ioReadErrorHandler(e:IOErrorEvent):void
+		{
+		}
+		private function fileStream_completeHandler(e:Event):void
+		{
+			var fileStream:FileStream = e.currentTarget as FileStream;
+			var bytes:ByteArray = new ByteArray();
+			fileStream.readBytes(bytes, 0, fileStream.bytesAvailable);
+			fileStream.close();
 			
 			var loader:Loader = new Loader();
+			var loaderContext:LoaderContext = new LoaderContext(false, ApplicationDomain.currentDomain);
+			loaderContext.allowLoadBytesCodeExecution = true;
 			loader.contentLoaderInfo.addEventListener(Event.COMPLETE, loaderInfo_completeHandler);
-			loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, loaderInfo_completeHandler);
-			loader.load(new URLRequest(File.documentsDirectory.resolvePath( "haxe-tanks-core\\source\\bin\\flash\\core.swf").url));
+			loader.loadBytes(bytes, loaderContext);
+			//loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, loaderErrored);
+			bytes.position= 0;
 		}
-		
 		private function loaderInfo_completeHandler(e:Event):void 
 		{
 			//var loader:Loader = e.currentTarget.loader;
 			var dash:Class = e.currentTarget.applicationDomain.getDefinition("com.gt.tanks.Player")  as  Class;
 			
-			var p:Object = new dash();
+			var p:Player = new dash();
 			//trace(p.get_armors().get(ArmorType.heavy).unlockLevel);
 			trace(p.get_armors().get(ArmorType.SIMPLE).get_destrsuction());
 		}
